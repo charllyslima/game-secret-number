@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit&family=Montserrat&display=swap");
+
+:root {
+  --font-family: "Kanit", sans-serif;
+  --bg-color: #d5ffe4;
+  --primary-color: #a084e8;
+  --secondary-color: #6F61C0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  font-family: var(--font-family);
+}
+
+.title {
+  font-size: 5em;
+  margin-bottom: 20px;
+}
+
+.sub-title {
+  font-size: 2.5em;
+}
+
+.message {
+  font-size: 1.5rem;
+  margin-top: 40px;
+}
+
+.box {
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+  display: inline-block;
+  padding: 10px;
+  font-size: 4em;
+  margin: 20px;
+  border-radius: 5px;
+}
