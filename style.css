@@ -2,9 +2,10 @@
 
 :root {
   --font-family: "Kanit", sans-serif;
-  --bg-color: #d5ffe4;
-  --primary-color: #a084e8;
-  --secondary-color: #6F61C0;
+  --bg-color: #FFD2D7;
+  --primary-color: #241468;
+  --secondary-color: #9F0D7F;
+  --default-color: #EA1179;
 }
 
 body {
@@ -44,11 +45,47 @@ body {
   border-radius: 5px;
 }
 
-.btn{
+.btn {
   padding: 8px 15px;
   border: 0;
   background-color: var(--primary-color);
   border-radius: 5px;
   margin-top: 20px;
   color: white;
+}
+
+.fa-microphone {
+  font-size: 4em;
+}
+
+.blink {
+  animation: blink 1s alternate-reverse infinite;
+  -webkit-animation: blink 1s alternate-reverse infinite;
+}
+
+.instructions {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  background-color: var(--secondary-color);
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+}
+
+.instructions > h3 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }

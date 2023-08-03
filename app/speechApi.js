@@ -17,7 +17,6 @@ recognition.start()
 recognition.addEventListener("result", onSpeak)
 
 function onSpeak(e) {
-  console.log(`entrou`)
   const speak = e.results[0][0].transcript
   showSpeak(speak)
   isValid(speak)

@@ -6,7 +6,6 @@ const generateNumberRandom = () => {
 }
 
 const secretNumber = generateNumberRandom()
-console.log(secretNumber)
 
 const elementSmallerNumber = document.querySelector("#smaller-number")
 elementSmallerNumber.innerHTML = smallNumber

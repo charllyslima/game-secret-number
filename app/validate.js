@@ -6,6 +6,8 @@ document.body.addEventListener("click", (e) => {
 
 function isValid(number) {
   const numberInt = +number
+  speakCommands(number)
+
   if (Number.isNaN(numberInt)) {
     elementAttempt.innerHTML += `<div>O número inválido</div>`
     return
@@ -18,17 +20,10 @@ function isValid(number) {
 
   if (numberInt === secretNumber) {
     document.body.innerHTML = `<h2 class='title'>Você acertou!</h2><h3 class='sub-title'>O número secreto era ${secretNumber}</h3><button id='play-again' class='btn'>Jogar novamente</button>`
-    return
-  }
-
-  if (number < secretNumber) {
+  } else if (number < secretNumber) {
     elementAttempt.innerHTML += `<div>O número secreto é maior <i class="fa-solid fa-arrows-up-to-line"></i></div>`
-    return
-  }
-
-  if (number > secretNumber) {
+  } else if (number > secretNumber) {
     elementAttempt.innerHTML += `<div>O número secreto é menor <i class="fa-solid fa-arrows-down-to-line"></i></div>`
-    return
   }
 }
 
@@ -38,4 +33,16 @@ function isNaN(number) {
 
 function isInsideInterval(number) {
   return number > bigNumber || number < smallNumber
+}
+
+function speakCommands(speakCommand) {
+  switch (speakCommand) {
+    case "reiniciar":
+    case "jogar novamente":
+      window.location.reload()
+      break
+    case "encerrar":
+      document.body.innerHTML = `<h2 class='title'>Jogo encerrado!</h2>`
+      break
+  }
 }
