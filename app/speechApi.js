@@ -17,9 +17,10 @@ recognition.start()
 recognition.addEventListener("result", onSpeak)
 
 function onSpeak(e) {
+  console.log(`entrou`)
   const speak = e.results[0][0].transcript
-  console.log(speak)
   showSpeak(speak)
+  isValid(speak)
 }
 
 function showSpeak(speak) {
@@ -28,3 +29,5 @@ function showSpeak(speak) {
         <span class="box">${speak}</span>
     `
 }
+
+recognition.addEventListener("end", () => recognition.start())
